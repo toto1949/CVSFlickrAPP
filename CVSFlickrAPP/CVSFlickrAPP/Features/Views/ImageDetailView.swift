@@ -38,7 +38,6 @@ struct ImageDetailView: View {
                     if !image.title.isEmpty {
                         Text(image.title)
                             .font(.title)
-                            .accessibilityAddTraits(.isHeader)
                     }
                     
                     if !image.description.isEmpty {
