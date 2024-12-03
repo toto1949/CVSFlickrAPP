@@ -9,17 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = FlickrViewModel()
-    @State private var searchText = ""
     
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                SearchBar(text: $searchText)
-                    .onChange(of: searchText) { newValue in
-                        Task {
-                            await viewModel.search(for: newValue)
-                        }
-                    }
+                SearchBar(text: $viewModel.searchText)
                 
                 if viewModel.isLoading {
                     LoadingView()

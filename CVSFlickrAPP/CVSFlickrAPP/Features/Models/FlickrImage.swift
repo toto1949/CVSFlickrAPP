@@ -27,14 +27,7 @@ struct FlickrImage: Codable, Identifiable, Hashable {
     }
     
     var formattedDate: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        if let date = dateFormatter.date(from: published) {
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .short
-            return dateFormatter.string(from: date)
-        }
-        return published
+        Date.formatted(from: published, inputFormat: "yyyy-MM-dd'T'HH:mm:ssZ", outputStyle: .medium) ?? published
     }
 }
 

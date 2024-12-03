@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		444FB4012CFF538300FB576B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444FB4002CFF538300FB576B /* Helper.swift */; };
+		444FB4032CFF72E400FB576B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444FB4022CFF72E400FB576B /* CustomTextField.swift */; };
+		444FB4052CFF74C300FB576B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444FB4042CFF74C300FB576B /* DateExtension.swift */; };
+		444FB4072CFF77C500FB576B /* ImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444FB4062CFF77C500FB576B /* ImageSection.swift */; };
+		444FB4092CFF780900FB576B /* DetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444FB4082CFF780900FB576B /* DetailsSection.swift */; };
 		44D61C142CFEA0EB007577D0 /* CVSFlickrAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D61C132CFEA0EB007577D0 /* CVSFlickrAPPApp.swift */; };
 		44D61C162CFEA0EB007577D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D61C152CFEA0EB007577D0 /* ContentView.swift */; };
 		44D61C182CFEA0EE007577D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D61C172CFEA0EE007577D0 /* Assets.xcassets */; };
@@ -51,6 +55,10 @@
 
 /* Begin PBXFileReference section */
 		444FB4002CFF538300FB576B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		444FB4022CFF72E400FB576B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		444FB4042CFF74C300FB576B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		444FB4062CFF77C500FB576B /* ImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSection.swift; sourceTree = "<group>"; };
+		444FB4082CFF780900FB576B /* DetailsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSection.swift; sourceTree = "<group>"; };
 		44D61C102CFEA0EB007577D0 /* CVSFlickrAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVSFlickrAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D61C132CFEA0EB007577D0 /* CVSFlickrAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSFlickrAPPApp.swift; sourceTree = "<group>"; };
 		44D61C152CFEA0EB007577D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +196,9 @@
 				44D61C462CFEA2C4007577D0 /* LoadingView.swift */,
 				44D61C492CFEA2D2007577D0 /* ErrorView.swift */,
 				44D61C4B2CFEA2E2007577D0 /* ImageCell.swift */,
+				444FB4022CFF72E400FB576B /* CustomTextField.swift */,
+				444FB4062CFF77C500FB576B /* ImageSection.swift */,
+				444FB4082CFF780900FB576B /* DetailsSection.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				44D61C602CFEA3F1007577D0 /* ViewsExtensions.swift */,
+				444FB4042CFF74C300FB576B /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,17 +389,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				444FB4092CFF780900FB576B /* DetailsSection.swift in Sources */,
 				44D61C522CFEA325007577D0 /* FlickrImage.swift in Sources */,
+				444FB4052CFF74C300FB576B /* DateExtension.swift in Sources */,
 				44D61C642CFEA415007577D0 /* Constants.swift in Sources */,
 				44D61C162CFEA0EB007577D0 /* ContentView.swift in Sources */,
 				44D61C4F2CFEA30C007577D0 /* FlickrViewModel.swift in Sources */,
 				44D61C142CFEA0EB007577D0 /* CVSFlickrAPPApp.swift in Sources */,
+				444FB4032CFF72E400FB576B /* CustomTextField.swift in Sources */,
 				444FB4012CFF538300FB576B /* Helper.swift in Sources */,
 				44D61C562CFEA383007577D0 /* NetworkManager.swift in Sources */,
 				44D61C422CFEA294007577D0 /* ImageGridView.swift in Sources */,
 				44D61C402CFEA284007577D0 /* SearchBar.swift in Sources */,
 				44D61C4A2CFEA2D2007577D0 /* ErrorView.swift in Sources */,
 				44D61C4C2CFEA2E2007577D0 /* ImageCell.swift in Sources */,
+				444FB4072CFF77C500FB576B /* ImageSection.swift in Sources */,
 				44D61C6A2CFEB9A4007577D0 /* NetworkManaging.swift in Sources */,
 				44D61C442CFEA2A7007577D0 /* ImageDetailView.swift in Sources */,
 				44D61C5A2CFEA39A007577D0 /* NetworkError.swift in Sources */,

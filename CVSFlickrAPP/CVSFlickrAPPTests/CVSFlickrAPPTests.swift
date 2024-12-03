@@ -10,6 +10,7 @@ import XCTest
 
 final class CVSFlickrAPPTests: XCTestCase {
     
+    
     class MockNetworkManager: NetworkManaging {
         var shouldReturnError = false
         var mockResponse: FlickrResponse?
@@ -63,17 +64,31 @@ final class CVSFlickrAPPTests: XCTestCase {
         mockNetworkManager.shouldReturnError = true
         let viewModel = FlickrViewModel(networkManager: mockNetworkManager)
         await viewModel.search(for: "Nature")
-        
         XCTAssertTrue(viewModel.images.isEmpty)
         XCTAssertFalse(viewModel.isLoading)
     }
     
     @MainActor func testSearchEmptyQuery() async {
         let mockNetworkManager = MockNetworkManager()
+        let mockImages = [
+            FlickrImage(
+                title: "A Creature from Hell?",
+                link: "https://www.flickr.com/photos/60250038@N02/54161603243/",
+                media: ["m": "https://live.staticflickr.com/65535/54161603243_febf6d0beb_m.jpg"],
+                dateTaken: "2024-05-30T11:46:39-08:00",
+                description: "Description 1",
+                published: "2024-11-24T15:31:45Z",
+                author: "nobody@flickr.com"
+            )
+        ]
+        mockNetworkManager.mockResponse = FlickrResponse(items: mockImages)
         let viewModel = FlickrViewModel(networkManager: mockNetworkManager)
         await viewModel.search(for: "")
         
-        XCTAssertTrue(viewModel.images.isEmpty)
+        XCTAssertEqual(viewModel.images.count, 1)
+        XCTAssertEqual(viewModel.images.first?.title, "A Creature from Hell?")
         XCTAssertNil(viewModel.errorMessage)
+        XCTAssertFalse(viewModel.isLoading)
     }
+
 }

@@ -5,6 +5,7 @@
 //  Created by Taooufiq El moutaoouakil on 12/2/24.
 //
 
+import Combine
 import SwiftUI
 
 @MainActor
@@ -12,11 +13,24 @@ class FlickrViewModel: ObservableObject {
     @Published var images: [FlickrImage] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
+    @Published var searchText: String = "" 
     
     private let networkManager: NetworkManaging
+    private var cancellables = Set<AnyCancellable>()
     
     init(networkManager: NetworkManaging = NetworkManager.shared) {
         self.networkManager = networkManager
+        
+        $searchText
+            .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
+            .removeDuplicates()
+            .sink { [weak self] newValue in
+                Task {
+                    await self?.search(for: newValue)
+                }
+            }
+            .store(in: &cancellables)
+        
         Task {
             await loadDefaultImages()
         }

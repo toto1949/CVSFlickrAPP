@@ -13,25 +13,7 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            TextField("Search images...", text: $text)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
-                .overlay(
-                    HStack {
-                        if !text.isEmpty {
-                            Button(action: {
-                                self.text = ""
-                            }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding(.trailing, 8)
-                            }
-                        }
-                    }
-                    .padding(.horizontal),
-                    alignment: .trailing
-                )
+            CustomTextField(text: $text, placeholder: "Search images...")
         }
         .padding(.horizontal)
     }

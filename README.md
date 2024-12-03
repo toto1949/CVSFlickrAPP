@@ -38,6 +38,23 @@ No API key required.
 - Author information
 - Formatted publication date
 
+## Demo
+
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <video src="https://drive.google.com/file/d/11pOe1hoP4-bylxEJnAHdi6A8kl6Bq1pZ/view?usp=drive_link" width="320"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://drive.google.com/file/d/11pOe1hoP4-bylxEJnAHdi6A8kl6Bq1pZ/view?usp=drive_link">Watch Full Demo Video</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## Testing
 
 Includes unit tests covering core functionality.
