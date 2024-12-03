@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		444FB4012CFF538300FB576B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444FB4002CFF538300FB576B /* Helper.swift */; };
 		44D61C142CFEA0EB007577D0 /* CVSFlickrAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D61C132CFEA0EB007577D0 /* CVSFlickrAPPApp.swift */; };
 		44D61C162CFEA0EB007577D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D61C152CFEA0EB007577D0 /* ContentView.swift */; };
 		44D61C182CFEA0EE007577D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D61C172CFEA0EE007577D0 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		444FB4002CFF538300FB576B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		44D61C102CFEA0EB007577D0 /* CVSFlickrAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVSFlickrAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D61C132CFEA0EB007577D0 /* CVSFlickrAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSFlickrAPPApp.swift; sourceTree = "<group>"; };
 		44D61C152CFEA0EB007577D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				44D61C632CFEA415007577D0 /* Constants.swift */,
 				44D61C652CFEA41F007577D0 /* Logger.swift */,
+				444FB4002CFF538300FB576B /* Helper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				44D61C162CFEA0EB007577D0 /* ContentView.swift in Sources */,
 				44D61C4F2CFEA30C007577D0 /* FlickrViewModel.swift in Sources */,
 				44D61C142CFEA0EB007577D0 /* CVSFlickrAPPApp.swift in Sources */,
+				444FB4012CFF538300FB576B /* Helper.swift in Sources */,
 				44D61C562CFEA383007577D0 /* NetworkManager.swift in Sources */,
 				44D61C422CFEA294007577D0 /* ImageGridView.swift in Sources */,
 				44D61C402CFEA284007577D0 /* SearchBar.swift in Sources */,

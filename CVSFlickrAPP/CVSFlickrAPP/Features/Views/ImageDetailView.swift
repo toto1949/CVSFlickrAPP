@@ -46,7 +46,7 @@ struct ImageDetailView: View {
                             .font(.body)
                     }
                     
-                    Text("By \(image.author)")
+                    Text("Author: \(cleanName(image.author))")
                         .font(.subheadline)
                     
                     Text("Published: \(image.formattedDate)")

@@ -18,20 +18,4 @@ extension View {
         }
     }
 }
-func getAttributedString(from htmlString: String) -> AttributedString {
-    guard let data = htmlString.data(using: .utf8) else {
-        return AttributedString(htmlString)
-    }
-    
-    do {
-        let attributedString = try NSAttributedString(
-            data: data,
-            options: [.documentType: NSAttributedString.DocumentType.html],
-            documentAttributes: nil
-        )
-        return AttributedString(attributedString.string)
-    } catch {
-        print("Error parsing HTML: \(error)")
-        return AttributedString(htmlString)
-    }
-}
+
