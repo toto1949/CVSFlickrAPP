@@ -25,7 +25,7 @@ struct ContentView: View {
                     ImageGridView(images: viewModel.images)
                 }
             }
-            .navigationTitle("Flickr Search")
+            .navigationTitle(UIStrings.flickrSearch.rawValue)
         }
     }
 }

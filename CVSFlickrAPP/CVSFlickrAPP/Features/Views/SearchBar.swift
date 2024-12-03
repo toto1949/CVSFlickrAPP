@@ -13,7 +13,7 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            CustomTextField(text: $text, placeholder: "Search images...")
+            CustomTextField(text: $text, placeholder: UIStrings.searchImagesPlaceholder.rawValue)
         }
         .padding(.horizontal)
     }

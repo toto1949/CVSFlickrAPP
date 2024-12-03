@@ -11,7 +11,7 @@ struct LoadingView: View {
     var body: some View {
         VStack {
             ProgressView()
-            Text("Loading...")
+            Text(UIStrings.loading.rawValue)
                 .foregroundColor(.secondary)
         }
     }

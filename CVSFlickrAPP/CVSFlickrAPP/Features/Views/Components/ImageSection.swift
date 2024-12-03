@@ -27,7 +27,7 @@ struct ImageSection: View {
                 VStack {
                     Image(systemName: "photo")
                         .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height * 0.3)
-                    Text("Failed to load image. Tap to retry.")
+                    Text(UIStrings.failedToLoadImage.rawValue)
                         .font(.caption)
                         .foregroundColor(.gray)
                 }

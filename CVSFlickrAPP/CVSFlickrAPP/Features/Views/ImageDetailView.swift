@@ -20,6 +20,6 @@ struct ImageDetailView: View {
             .padding()
         }
         
-        .navigationBarItems(trailing: ShareLink(item: image.link))
+        .navigationBarItems(trailing: ShareLink(item: image.link ?? ""))
     }
 }

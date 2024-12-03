@@ -13,25 +13,25 @@ struct DetailsSection: View {
     
     var body: some View {
         VStack(alignment: sizeClass == .compact ? .center : .leading, spacing: 8) {
-            if !image.title.isEmpty {
-                Text(image.title)
+            if let title = image.title, !title.isEmpty {
+                Text(title)
                     .font(.title)
             } else {
-                Text("Title not available.")
+                Text(UIStrings.titleNotAvailable.rawValue)
                     .font(.title)
                     .foregroundColor(.gray)
             }
             
-            if !image.description.isEmpty {
-                Text(getAttributedString(from: image.description))
+            if  let description =  image.description, !description.isEmpty {
+                Text(getAttributedString(from: description))
                     .font(.body)
             } else {
-                Text("Description not available.")
+                Text(UIStrings.descriptionNotAvailable.rawValue)
                     .font(.body)
                     .foregroundColor(.gray)
             }
             
-            Text("Author: \(cleanName(image.author))")
+            Text("Author: \(cleanName(image.author ?? ""))")
                 .font(.subheadline)
             
             Text("Published: \(image.formattedDate)")
